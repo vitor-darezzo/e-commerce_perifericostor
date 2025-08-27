@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f3f3f3;
+}
+
+/* HEADER */
+header {
+  background-color: #0f0e0ede;
+  padding: 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header img {
+  width: 40px;
+}
+
+nav a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* BANNER */
+.banner {
+  background: url('https://img.freepik.com/vetores-gratis/fundo-de-estilo-comico-de-velocidade-azul_23-2148820924.jpg') no-repeat center;
+  background-size: cover;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 1px 1px 4px #000;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+/* PRODUTOS */
+.produtos {
+  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.produto {
+  background-color: white;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.produto img {
+  width: 100%;
+  max-height: 150px;
+  object-fit: contain;
+}
+
+.produto h3 {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.produto p {
+  color: #067ece;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.produto button {
+  padding: 10px 15px;
+  background-color: #067ece;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.produto button:hover {
+  background-color: #055fa3;
+}
+
+/* RODAPÉ */
+footer {
+  background-color: #0f0e0ede;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  padding: 5%;
+  margin-top: 40px;
+}
