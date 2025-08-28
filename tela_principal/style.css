@@ -6,22 +6,18 @@ body {
 
 /* HEADER */
 header {
-  position: fixed;
-  top: 0;
-  /* Posiciona no topo da janela */
-  left: 0;
-  /* Posiciona no início da janela */
-  width: 100%;
-  /* Ocupa toda a largura da janela */
-  z-index: 100;
-  /* Garante que fique acima de outros conteúdos */
+  position: fixed; /* deixa a header fixa*/
+  box-sizing: border-box; /*impede o padding de mudar a largura*/
+  top: 0; /* Posiciona no topo da janela */
+  left: 0; /* Posiciona no início da janela */
+  width: 100%; /* Ocupa toda a largura da janela */
+  z-index: 100; /* Garante que fique acima de outros conteúdos */
   background-color: #16181B;
   padding: 20px;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
 }
 
 header img {
