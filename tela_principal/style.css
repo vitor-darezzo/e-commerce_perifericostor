@@ -4,20 +4,71 @@ body {
   background-color: #f3f3f3;
 }
 
+/* barra de pesquisa */
+   .header-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .search-bar {
+      display: flex;
+      width: 400px;
+      height: 40px;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    }
+
+    .search-bar select {
+      background: #e6e6e6;
+      border: none;
+      padding: 0 10px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .search-bar input {
+      flex: 1;
+      border: none;
+      padding: 0 10px;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .search-bar button {
+      background-color: #e6e6e6;
+      border: none;
+      width: 40px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .search-bar button:hover {
+      background-color: black;
+    }
+
+    .search-bar button img{
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
 /* HEADER */
 header {
-  position: fixed; /* deixa a header fixa*/
+  position: fixed;  /*deixa a header fixa*/
   box-sizing: border-box; /*impede o padding de mudar a largura*/
   top: 0; /* Posiciona no topo da janela */
-  left: 0; /* Posiciona no início da janela */
-  width: 100%; /* Ocupa toda a largura da janela */
-  z-index: 100; /* Garante que fique acima de outros conteúdos */
+  left: 0;  /* Posiciona no início da janela */
+  width: 100%;  /* Ocupa toda a largura da janela */
+  z-index: 100;  /* Garante que fique acima de outros conteúdos */
   background-color: #16181B;
-  padding: 20px;
+  padding: 10px 30px;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
 }
 
 header img {
@@ -26,7 +77,7 @@ header img {
 
 nav a {
   color: #fff;
-  margin-left: 20px;
+  margin-left: 10px;
   text-decoration: none;
   font-weight: bold;
 }
