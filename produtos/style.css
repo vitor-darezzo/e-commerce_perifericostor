@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #fff;
+}
+
+/* barra de pesquisa */
+   .header-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .search-bar {
+      display: flex;
+      width: 400px;
+      height: 40px;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    }
+
+    .search-bar select {
+      background: #e6e6e6;
+      border: none;
+      padding: 0 10px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .search-bar input {
+      flex: 1;
+      border: none;
+      padding: 0 10px;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .search-bar button {
+      background-color: #e6e6e6;
+      border: none;
+      width: 40px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .search-bar button:hover {
+      background-color: black;
+    }
+
+    .search-bar button img{
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
+/* HEADER */
+header {
+  position: fixed;  /*deixa a header fixa*/
+  box-sizing: border-box; /*impede o padding de mudar a largura*/
+  top: 0; /* Posiciona no topo da janela */
+  left: 0;  /* Posiciona no início da janela */
+  width: 100%;  /* Ocupa toda a largura da janela */
+  z-index: 100;  /* Garante que fique acima de outros conteúdos */
+  background-color: #16181B;
+  padding: 10px 30px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+header img {
+  width: 40px;
+}
+
+nav a {
+  color: #fff;
+  margin-left: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* PRODUTOS */
+.produtos {
+  padding: 40px 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 250px;
+}
+.produto {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centraliza tudo horizontalmente */
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 200px;
+  text-align: center;
+}
+
+.produto img {
+  width: 100%;
+  max-height: 150px;
+  object-fit: contain;
+}
+
+.produto h3 {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.produto p {
+  color: #067ece;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.btn {
+  background-color: #007BFF; /* azul */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-top: auto; /* empurra o botão para o fim do card */
+  width: 100%; /* botão ocupa toda a largura do card */
+}
+
+.btn:hover {
+  background-color: #055fa3;
+}
+
+/*CARRINHO LATERAL*/
+.carrinho-lateral {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 300px;
+  height: 100%;
+  background: #1a1a1a;
+  color: #fff;
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 1000;
+  overflow-y: auto;
+  border-left: 2px solid yellow;
+}
+
+.carrinho-lateral.aberto {
+  right: 0;
+}
+
+.itens-carrinho div {
+  border-bottom: 1px solid #333;
+  padding: 10px 0;
+}
+
+.itens-carrinho p {
+  color: #bbb;
+  margin-top: 20px;
+  text-align: center;
+}
+.carrinho-toggle {
+  cursor: pointer;
+  font-weight: bold;
+}
+.fechar-carrinho {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+}
