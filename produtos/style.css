@@ -6,7 +6,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: #111;
+  background: #0d0d0d;
   color: #fff;
 }
 
@@ -68,7 +68,7 @@ header {
   left: 0;  /* Posiciona no início da janela */
   width: 100%;  /* Ocupa toda a largura da janela */
   z-index: 100;  /* Garante que fique acima de outros conteúdos */
-  background-color: #16181B;
+  background: linear-gradient(to right, #0D0D0D, #1B3A70);
   padding: 10px 30px;
   color: #fff;
   display: flex;
@@ -112,14 +112,14 @@ nav a:hover {
   border-radius: 8px;
   width: 200px;
   text-align: center;
-   background: #1a1a1a;
-  border: 1px solid #333;
-   transition: 0.3s;
+  background: #131313;
+  border: 1px solid #222;
+  transition: 0.3s;
 }
 
 .produto:hover {
   transform: scale(1.03);
-  border-color: #067ece;
+  border-color: #1b3a70;
 }
 
 .produto img {
@@ -134,13 +134,13 @@ nav a:hover {
 }
 
 .produto p {
-  color: #067ece;
+  color: #1b3a70;
   font-weight: bold;
   margin: 10px 0;
 }
 
 .btn {
-  background-color: #007BFF; /* azul */
+  background-color: #1b3a70; 
   color: white;
   border: none;
   padding: 10px 15px;
@@ -151,7 +151,7 @@ nav a:hover {
 }
 
 .btn:hover {
-  background-color: #055fa3;
+  background-color: #2c4f8c;
 }
 
 /*CARRINHO LATERAL*/
@@ -161,13 +161,13 @@ nav a:hover {
   right: -400px;
   width: 300px;
   height: 100%;
-  background: #1a1a1a;
+  background: #131313;
   color: #fff;
   padding: 20px;
   transition: right 0.3s ease;
   z-index: 1000;
   overflow-y: auto;
-  border-left: 2px solid #067ece;
+  border-left: 2px solid #1b3a70;
 }
 
 .carrinho-lateral.aberto {
@@ -199,7 +199,7 @@ nav a:hover {
   cursor: pointer;
 }
 .comprar-carrinho {
-  background-color: #067ece; 
+  background-color: #1B3A70; 
   color: white;
   border: none;
   padding: 10px 15px;
@@ -208,4 +208,15 @@ nav a:hover {
   cursor: pointer;
   position: fixed;
   bottom: 10px;
+}
+
+/* RODAPÉ */
+footer {
+      background-color: #131313;
+      color: white;
+      text-align: center; 
+      height: 200px;
+      font-size: 15px;
+      padding: 5%;
+      margin-top: 0;
 }
