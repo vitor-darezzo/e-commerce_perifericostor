@@ -93,23 +93,33 @@ nav a:hover {
 }
 
 /* PRODUTOS */
+
 .produtos {
   padding: 40px 10px;
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
   max-width: 1000px;
   margin: 250px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .produto {
   display: flex;
   flex-direction: column;
   align-items: center; /* centraliza tudo horizontalmente */
   padding: 15px;
-  border: 1px solid #ccc;
   border-radius: 8px;
   width: 200px;
   text-align: center;
+   background: #1a1a1a;
+  border: 1px solid #333;
+   transition: 0.3s;
+}
+
+.produto:hover {
+  transform: scale(1.03);
+  border-color: #067ece;
 }
 
 .produto img {
@@ -137,6 +147,7 @@ nav a:hover {
   border-radius: 5px;
   margin-top: auto; /* empurra o botão para o fim do card */
   width: 100%; /* botão ocupa toda a largura do card */
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -156,7 +167,7 @@ nav a:hover {
   transition: right 0.3s ease;
   z-index: 1000;
   overflow-y: auto;
-  border-left: 2px solid yellow;
+  border-left: 2px solid #067ece;
 }
 
 .carrinho-lateral.aberto {
@@ -186,4 +197,15 @@ nav a:hover {
   top: 10px;
   right: 15px;
   cursor: pointer;
+}
+.comprar-carrinho {
+  background-color: #067ece; 
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  width: 17%; /* botão ocupa toda a largura do card */
+  cursor: pointer;
+  position: fixed;
+  bottom: 10px;
 }
