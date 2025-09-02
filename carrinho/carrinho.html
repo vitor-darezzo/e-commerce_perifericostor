@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PeriféricoStore</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <img src="../image/logo_perifericos_store_PS_sem_frase_branco.png" alt="PeriféricoStore">
+    <div class="header-right">
+    <div class="search-bar">
+    <input type="text" placeholder="Pesquisar">
+    <button onclick="buscar()">
+     <img src="../image/lupa.png" alt="Buscar">
+    </button>
+    </div>
+    <nav>
+      <a href="../tela_principal/site.html">Início</a>
+      <a href="../produtos/produtos.html">Produtos</a>
+      <a href="../login/login.html">Entrar</a>
+      <a href="../cadastro/cadastro.html">Cadastrar</a>
+    </nav>
+  </div>
+  </header>
+  
+    <div class="carrinho-vazio">
+      <img src="../image/carrinho-removebg-preview.png">
+    <h1>Nenhum produto no seu carrinho</h1>
+    <h2>Deseja conferir outros produtos?</h2>
+         <button class="botao-continuar" onclick="window.location.href='../produtos/produtos.html'">Continuar Comprando</button>
+      </div>
+      
+      <!-- RODAPÉ -->
+  <footer>
+    <div>
+    Condições de Uso | Notificação de Privacidade | Cookies | Anúncios Baseados em Interesses
+    </div>
+    <div>
+      © 2025 PeriféricoStore - Todos os direitos reservados
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
