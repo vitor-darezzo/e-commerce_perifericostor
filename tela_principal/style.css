@@ -1,43 +1,94 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f3f3f3;
-}
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-/* barra de pesquisa */
-   .header-right {
+    html, body {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background: #0D0D0D;
+      color: #fff;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    main {
+      flex: 1;
+      padding: 20px;
+      margin-top: 90px; /* espaço para o header fixo */
+    }
+
+    /* HEADER */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      background: linear-gradient(to right, #0D0D0D, #1B3A70);
+      padding: 10px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header img {
+      width: 40px;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .header-right {
       display: flex;
       align-items: center;
       gap: 20px;
     }
+
+    /* BARRA DE PESQUISA */
     .search-bar {
       display: flex;
       width: 400px;
       height: 40px;
       border-radius: 4px;
       overflow: hidden;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+      box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    }
+
+    .search-bar select,
+    .search-bar input,
+    .search-bar button {
+      border: none;
+      font-size: 14px;
     }
 
     .search-bar select {
       background: #e6e6e6;
-      border: none;
       padding: 0 10px;
-      font-size: 14px;
       cursor: pointer;
     }
 
     .search-bar input {
       flex: 1;
-      border: none;
       padding: 0 10px;
-      font-size: 14px;
       outline: none;
     }
 
     .search-bar button {
       background-color: #e6e6e6;
-      border: none;
       width: 40px;
       cursor: pointer;
       display: flex;
@@ -46,76 +97,105 @@ body {
     }
 
     .search-bar button:hover {
-      background-color: black;
+      background-color: #000;
     }
 
-    .search-bar button img{
+    .search-bar button img {
       width: 20px;
       height: 20px;
       object-fit: contain;
     }
-/* HEADER */
-header {
-  position: fixed;  /*deixa a header fixa*/
-  box-sizing: border-box; /*impede o padding de mudar a largura*/
-  top: 0; /* Posiciona no topo da janela */
-  left: 0;  /* Posiciona no início da janela */
-  width: 100%;  /* Ocupa toda a largura da janela */
-  z-index: 100;  /* Garante que fique acima de outros conteúdos */
-  background-color: #16181B;
-  padding: 10px 30px;
-  color: #fff;
+
+    .carrinho-toggle {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    /* BANNER */
+    .banner {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(to bottom, #131313, #1B3A70);
+      border-radius: 8px;
+      margin-bottom: 40px;
+    }
+
+    .banner h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .banner p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background: #1B3A70;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #3C6EB4;
+    }
+
+    /* CATEGORIAS */
+    .categorias {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .btn1{
+      background: #1B3A70;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn1:hover {
+      background: #3C6EB4;
+    }
+    
+
+    /* PRODUTOS */
+    .produtos {
+  padding: 60px 10px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-}
-
-header img {
-  width: 40px;
-}
-
-nav a {
-  color: #fff;
-  margin-left: 10px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* BANNER */
-.banner {
-  background: #16181B;
-  background-size: cover;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-shadow: 1px 1px 4px #000;
-  font-size: 36px;
-  font-weight: bold;
-}
-
-/* PRODUTOS */
-.produtos {
-  padding: 40px 20px;
-  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  max-width: 1200px;
-  margin: auto;
+  gap: 50px;
+  max-width: 1000px;
+  margin-left: 230px;
+  flex-wrap: center;
+  justify-content: center;
+}
+.produto {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centraliza tudo horizontalmente */
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+  background: #131313;
+  border: 1px solid #222;
+  transition: 0.3s;
 }
 
-.produto {
-  background-color: white;
-  padding: 20px;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
+.produto:hover {
+  transform: scale(1.03);
+  border-color: #1b3a70;
 }
 
 .produto img {
@@ -130,30 +210,78 @@ nav a:hover {
 }
 
 .produto p {
-  color: #067ece;
+  color: #1b3a70;
   font-weight: bold;
   margin: 10px 0;
 }
 
-.produto button {
-  padding: 10px 15px;
-  background-color: #067ece;
+.btn {
+  background-color: #1b3a70; 
   color: white;
   border: none;
-  border-radius: 3px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-top: auto; /* empurra o botão para o fim do card */
+  width: 100%; /* botão ocupa toda a largura do card */
   cursor: pointer;
 }
 
-.produto button:hover {
-  background-color: #055fa3;
+.btn:hover {
+  background-color: #2c4f8c;
 }
 
-/* RODAPÉ */
-footer {
-  background-color: #16181B;
-  color: white;
-  text-align: center;
-  font-size: 15px;
-  padding: 5%;
-  margin-top: 40px;
-}
+
+    /* CARRINHO LATERAL */
+    .carrinho-lateral {
+      position: fixed;
+      top: 0;
+      right: -400px;
+      width: 300px;
+      height: 100%;
+      background: #131313;
+      color: #fff;
+      padding: 20px;
+      transition: right 0.3s ease;
+      z-index: 1000;
+      overflow-y: auto;
+      border-left: 2px solid #1B3A70;
+    }
+
+    .carrinho-lateral.aberto {
+      right: 0;
+    }
+
+    .fechar-carrinho {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 20px;
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      cursor: pointer;
+    }
+
+    /* BENEFÍCIOS */
+    .beneficios {
+      margin: 40px auto;
+      text-align: center;
+    }
+
+    .beneficios ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .beneficios li {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    /* RODAPÉ */
+    footer {
+      background-color: #131313;
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+    }
