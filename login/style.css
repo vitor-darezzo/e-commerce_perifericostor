@@ -1,5 +1,6 @@
-/* LOGIN / CADASTRO */
-body{
+
+/*login*/
+body {
   background:#16181B;
   background-size: cover;
   
@@ -11,7 +12,7 @@ body{
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
 .container img {
@@ -46,11 +47,11 @@ button {
   font-size: 16px;
   cursor: pointer;
   border-radius: 2px;
-  border: 1px solid #067ece;
+  border: 1px solid #1b3a70;
 }
 
 .btn-blue {
-  background-color: #067ece;
+  background-color: #1b3a70;
   color: white;
 }
 
@@ -66,7 +67,7 @@ button {
 }
 
 .link a {
-  color: #0066c0;
+  color: #1b3a70;
   text-decoration: none;
 }
 
