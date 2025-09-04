@@ -30,7 +30,7 @@
       left: 0;
       width: 100%;
       z-index: 100;
-      background: linear-gradient(to right, #0D0D0D, #1B3A70);
+      background: linear-gradient(to right, #0D0D0D, #132d5a);
       padding: 10px 30px;
       display: flex;
       align-items: center;
@@ -113,17 +113,20 @@
     }
 
     /* BANNER */
-    .banner {
-      text-align: center;
-      padding: 60px 20px;
-      background: linear-gradient(to bottom, #131313, #1B3A70);
-      border-radius: 8px;
-      margin-bottom: 40px;
-    }
+   .banner {
+  text-align: center;
+  padding: 60px 20px;
+  background-image: url("../image/banner.jpg!w700wp");
+  background-size: 100% auto; /* 🔥 estica a largura totalmente */
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
 
     .banner h1 {
       font-size: 2.5em;
       margin-bottom: 10px;
+      font-family: 'Lucida Sans', sans-serif;
     }
 
     .banner p {
@@ -174,7 +177,7 @@
   padding: 60px 10px;
   display: flex;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 50px;
+  gap: 30px;
   max-width: 1000px;
   margin-left: 230px;
   flex-wrap: center;
