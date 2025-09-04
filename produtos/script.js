@@ -4,6 +4,19 @@ const itensCarrinhoEl = document.getElementById("itens-carrinho");
 const contadorEl = document.getElementById("contador");
 const contadorLateralEl = document.getElementById("contador-lateral");
 
+function finalizarPedido() {
+    const contador = document.getElementById("contador-lateral");
+    const quantidade = parseInt(contador.textContent);
+
+    if (quantidade > 0) {
+      // Vai para a página de finalização normal
+      window.location.href = '../cartão/cartao.html';
+    } else {
+      // Vai para uma outra página (ex: aviso de carrinho vazio)
+      window.location.href = '../carrinho/carrinho.html';
+    }
+  }
+
 function toggleCarrinho() {
   carrinhoEl.classList.toggle("aberto");
   atualizarCarrinho();
