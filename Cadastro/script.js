@@ -11,16 +11,28 @@ function showLogin() {
   loginForm.classList.remove('hidden');
 }
 
-function validateRegister(event) {
-  event.preventDefault();
-  const senha = document.getElementById("reg-senha").value;
-  const confirmarSenha = document.getElementById("confirm-senha").value;
+function cadastrarUsuario() {
+  const nome = document.getElementById("nome").value;
+  const email = document.getElementById("email").value;
+  const senha = document.getElementById("senha").value;
+  const confirmarSenha = document.getElementById("confirmarSenha").value;
 
   if (senha !== confirmarSenha) {
     alert("As senhas não coincidem!");
     return;
   }
-  else {
+
+  // Criar usuário
+  const usuario = {
+    nome: nome,
+    email: email,
+    senha: senha
+  };
+
+  // Armazenar no localStorage
+  localStorage.setItem("usuario", JSON.stringify(usuario));
+
   alert("Cadastro realizado com sucesso!");
-  }
+
+  window.location.href ="../login/login.html"; // Redireciona para tela de login
 }
