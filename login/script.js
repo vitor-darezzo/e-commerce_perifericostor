@@ -11,15 +11,22 @@ function showLogin() {
   loginForm.classList.remove('hidden');
 }
 
-function validateRegister(event) {
-  event.preventDefault();
-  const senha = document.getElementById("reg-senha").value;
-  const confirmarSenha = document.getElementById("confirm-senha").value;
+function loginUsuario() {
+  const email = document.getElementById("emailLogin").value;
+  const senha = document.getElementById("senhaLogin").value;
 
-  if (senha !== confirmarSenha) {
-    alert("As senhas não coincidem!");
-    return;
+  // Recuperar usuário salvo
+  const usuarioSalvo = JSON.parse(localStorage.getItem("usuario"));
+
+  if (!usuarioSalvo) {
+    alert("Nenhum usuário cadastrado. Crie uma conta!");
+    window.location.href = "../Cadastro/cadastro.html";
   }
 
-  alert("Cadastro realizado com sucesso!");
+  if (email === usuarioSalvo.email && senha === usuarioSalvo.senha) {
+    alert("Login realizado com sucesso!");
+    window.location.href ="../tela_principal/site.html" ; // Redireciona para home
+  } else {
+    alert("Email ou senha incorretos!");
+  }
 }
