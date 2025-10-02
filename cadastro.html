@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PeriféricoStore</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <a href="../tela_principal/site.html"><img src="../image/logo_perifericos_store_transparente_preto.png" alt="Logo"></a>
+
+        <!-- Cadastro -->
+    <div id="register-form" class="hidden">
+      <h2>Criar conta</h2>
+
+      <label for="name">Nome</label>
+      <input type="text" id="nome" placeholder="Nome completo" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" required>
+
+      <label for="senha">Senha</label>
+      <input type="password" id="senha" required>
+
+      <label for="confirmarSenha">Digite novamente a senha</label>
+      <input type="password" id="confirmarSenha" required>
+
+      <button type="button" class="btn-blue" onclick="cadastrarUsuario()">Criar sua conta</button>
+
+
+
+      <div class="link">
+        <span>Já tem uma conta? <a href="../login/login.html" onclick="showLogin()">Login</a></span>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script> 
+</body>
+</html>
