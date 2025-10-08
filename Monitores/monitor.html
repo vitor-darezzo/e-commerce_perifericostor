@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PeriféricoStore</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <!-- Cabeçalho -->
+  <header>
+    <a href="../tela_principal/site.html"><img src="../image/logo_perifericos_store_PS_sem_frase_branco.png" alt="PeriféricoStore"></a>    
+    <div class="header-right">
+    <div class="search-bar">
+    <input type="text" placeholder="Pesquisar">
+    <button onclick="buscar()">
+     <img src="../image/lupa.png" alt="Buscar">
+    </button>
+    </div>
+    <nav>
+      <a href="../login/login.html"><img src="../image/Icone.png"></a>
+    </nav>
+    <div class="carrinho-toggle" onclick="toggleCarrinho()"><img src="../image/carrinho_transparente.png"><span id="contador-lateral">0</span>
+    </div>
+  </header>
+
+  <!--Produtos-->
+    <section class="categorias">
+      <button class="btn1" onclick="window.location.href='../Teclados/teclados.html'">Teclados</button>
+      <button class="btn1" onclick="window.location.href='../Mouses/mouse.html'">Mouses</button>
+      <button class="btn1" onclick="window.location.href='../Headsets/headsets.html'">Headsets</button>
+      <button class="btn1" onclick="window.location.href='../Monitores/monitor.html'">Monitores</button>
+      <button class="btn1" onclick="window.location.href='../Acessórios/Acessorio.html'">Acessórios</button>
+    </section>
+
+    <section class="produtos">
+    <div class="produto">
+      <img src="../image/monitor.png" alt="Monitor Full HD">
+      <div class="produto-nome">Monitor ips 24" full hd</div>
+      <div class="produto-preco">R$ 799,90</div>
+      <div class="produto-parcelas">até 5x de R$ 176,00 no cartão</div>
+      <button class="btn" onclick="adicionarAoCarrinho('Monitor Full HD', 'R$ 799,90')">Adicionar ao carrinho</button>
+    </div>
+    </section>
+
+  <!--Carrinho lateral-->
+  <aside id="carrinho" class="carrinho-lateral">
+  <button class="fechar-carrinho" onclick="toggleCarrinho()">✖</button>
+  <div>MEU CARRINHO (<span id="contador-lateral">0</span>)</div>
+  <div id="itens-carrinho" class="itens-carrinho">
+  <p>Seu carrinho está vazio</p>
+  </div>
+  <button class="comprar-carrinho" onclick="finalizarPedido()">Finalizar Pedido</button>
+</aside>
+
+      <!-- RODAPÉ -->
+  <footer>
+    <div>
+    Condições de Uso | Notificação de Privacidade | Cookies | Anúncios Baseados em Interesses
+    </div>
+    <div>
+      © 2025 PeriféricoStore - Todos os direitos reservados
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
